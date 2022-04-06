@@ -34,14 +34,16 @@ window.onload = function() {
     // dept = String(dept.value)
 
     // GET THE LOGINDETAILS OUTPUT ELEMENT FROM THE PARENT PAGE
-    window.addEventListener('load', () => {
-        let parentOutput = window.opener.document.getElementById('loginDetails')
-        // SET THE TEXT OF THE LOGINDETAILS ELEMENT TO THE ABOVE SET VARIABLES
-        parentOutput.innerHTML = `ID: ${id} \nName: ${name} \nExtension: ${ext} \nEmail: ${email} \nDepartment: ${dept}`
-    })
-
+    let parentOutput = window.opener.document.getElementById('loginDetails')
+    // SET THE TEXT OF THE LOGINDETAILS ELEMENT TO THE ABOVE SET VARIABLES
+    parentOutput.innerHTML = `ID: ${id} \nName: ${name} \nExtension: ${ext} \nEmail: ${email} \nDepartment: ${dept}`
+    
 
     // CLOSE THE POPUP
+    empForm.addEventListener('submit', () => {
+        window.close()
+    })
 
     // THE DATA SHOULD SHOW ON THE INDEX.HTML PAGE
+    
 }
