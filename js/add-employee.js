@@ -26,7 +26,7 @@ window.onload = function() {
         let dept = $('department').value
         let parentOutput = window.opener.document.getElementById('loginDetails')
         // SET THE TEXT OF THE LOGINDETAILS ELEMENT TO THE ABOVE SET VARIABLES
-        parentOutput.innerHTML = `ID: ${id} \nName: ${name} \nExtension: ${ext} \nEmail: ${email} \nDepartment: ${dept}`
+        parentOutput.innerHTML = `ID: ${id} <br> Name: ${name} <br> Extension: ${ext} <br> Email: ${email} <br> Department: ${dept}`
     })
     // CLOSE THE POPUP
     empForm.addEventListener('submit', () => {
