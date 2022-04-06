@@ -19,31 +19,18 @@ window.onload = function() {
     let empForm = $('empForm')
     empForm.addEventListener('submit', (e) => {
         e.preventDefault()
+        let id = $('id').value
+        let name = $('name').value
+        let ext = $('extension').value
+        let email = $('email').value
+        let dept = $('department').value
+        let parentOutput = window.opener.document.getElementById('loginDetails')
+        // SET THE TEXT OF THE LOGINDETAILS ELEMENT TO THE ABOVE SET VARIABLES
+        parentOutput.innerHTML = `ID: ${id} \nName: ${name} \nExtension: ${ext} \nEmail: ${email} \nDepartment: ${dept}`
     })
-    // CREATE 5 VARIABLES FOR ID, NAME, EXT, EMAIL, AND DEPT
-    // SET THOSE VARIABLES TO WHATEVER THE USER ENTERS INTO THE FORM ELEMENTS
-    let id = $('id').value
-    let name = $('name').value
-    let ext = $('extension').value
-    let email = $('email').value
-    let dept = $('department').value
-    // id = parseInt(id.value)
-    // name = String(name.value)
-    // ext = parseInt(ext.value)
-    // email = String(email.value)
-    // dept = String(dept.value)
-
-    // GET THE LOGINDETAILS OUTPUT ELEMENT FROM THE PARENT PAGE
-    let parentOutput = window.opener.document.getElementById('loginDetails')
-    // SET THE TEXT OF THE LOGINDETAILS ELEMENT TO THE ABOVE SET VARIABLES
-    parentOutput.innerHTML = `ID: ${id} \nName: ${name} \nExtension: ${ext} \nEmail: ${email} \nDepartment: ${dept}`
-    
-
     // CLOSE THE POPUP
     empForm.addEventListener('submit', () => {
         window.close()
     })
-
     // THE DATA SHOULD SHOW ON THE INDEX.HTML PAGE
-    
 }
